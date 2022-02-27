@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pil{
+            width: 600px;
+            height: 30px;
+            margin: auto;
+            border: 1px solid black;
+            text-align: center;
+            background-color: lightgray;
+            display: block;
+            border: 2px solid gray;
+            border-left: 1px;
+            border-right: 1px;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+        .tb1{
+            width: 600px;
+            margin: auto;
+            padding-top: 5px;
+            border-spacing: 10px;
+
+        }
+        .seon{
+            width: 600px;
+            height: 30px;
+            margin: auto;
+            border: 1px solid black;
+            text-align: center;
+            background-color: lightgray;
+            display: block;
+            border: 2px solid gray;
+            border-left: 1px;
+            border-right: 1px;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+        .tb2{
+            width: 600px;
+            margin: auto;
+            padding-top: 5px;
+            border-spacing: 10px;
+        }
+        .t1{
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(83, 212, 83); text-align: center;">회원가입 폼</h1>
+    <div class="pil">필수정보</div>
+    <table class="tb1">
+        <tr>
+            <td>아이디</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td>비밀번호 확인</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>성별</td>
+            <td><input type="radio">남자<input type="radio">여자</td>
+        </tr>
+        <tr>
+            <td>연락처</td>
+            <td>
+                <select name="tel">
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="016">016</option>
+                    <option value="017">017</option>
+                </select>
+                -
+                <input type="tel">-
+                <input type="tel">
+                </td>
+        </tr>        
+    </table>
+    <div class="seon">선택정보</div>
+    <table class="tb2">
+        <tr>
+            <td>닉네임</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td>
+                <input type="email"> @ <input type="email" placeholder="도메인 입력/선택">
+            </td>
+        </tr>
+        <tr>
+            <td>이메일 수신</td>
+            <td>
+            <input type="radio">수신
+            <input type="radio">미수신
+            </td>
+        </tr>
+        <tr>
+            <td>SMS 수신</td>
+            <td>
+            <input type="radio">수신
+            <input type="radio">미수신
+            </td>
+        </tr>
+        <tr>
+            <td>취미 활동</td>
+            <td>
+                <input type="checkbox">독서
+                <input type="checkbox">낚시
+                <input type="checkbox">수영
+            </td>
+        </tr>
+        <tr>
+            <td>프로필 사진</td>
+            <td>
+                <input type="file" placeholder="파일 선택">
+            </td>
+        </tr>
+    </table>
+    <hr style="width: 600px;">
+    <div class="t1">
+        <input type="submit" value="회원가입">
+        <input type="reset" value="다시작성">
+    </div>
+</body>
+</html>

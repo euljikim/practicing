@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgray;
+            margin: auto;
+        }
+        .t1{
+            text-align: center;
+            text-shadow: 2px 2px 2px gray;
+        }
+        .t2{
+            text-align: center;
+            color: red;
+            text-shadow: 2px 2px 2px gray;
+            margin-right: 600px;
+        }
+        .box1{
+            width: 700px;
+            height: 150px;
+            border: 1px solid black;
+            margin: auto;
+            caption-side: top;
+        }
+        .table1{
+            width: 650px;
+            height: 100px;
+            text-align: center;
+            margin: auto;
+            font-weight: bold;
+            padding: 20px;
+        }
+        .box2{
+            width: 700px;
+            height: 250px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        .table2{
+            width: 600px;
+            height: 250px;
+            text-align: center;
+            margin: auto;
+            font-weight: bold;
+            padding: 15px
+        }
+        .t3{
+            text-align: center;
+            margin-right: 600px;
+        }
+        .t4{
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+    <h1 class="t1" >상품 주문서</h1>
+    <h2 class="t2">개인 정보</h2>
+    <div class="box1" border="1">
+        <table class="table1">
+            <tr>
+                <td>이름</td>
+                <td><input type="text" placeholder="필수" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>연락처</td>
+                <td><input type="tel" placeholder="필수" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td><input type="text" placeholder="필수" style="width: 500px;"></td>
+            </tr>
+        </table>
+    </div>
+    <h2 class="t2">배송자 정보</h2>
+    <h5 class="t3"><input type="checkbox">주문자 정보와 같음</h5>
+    <div class="box2" border="1">
+        <table class="table2">
+            <tr>
+                <td>이름</td>
+                <td><input type="text" placeholder="필수" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>연락처</td>
+                <td><input type="tel" placeholder="필수" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td><input type="text" placeholder="필수" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>메모</td>
+                <td><textarea style="width: 500px; height: 100px;">경비실에 맡겨주세요.</textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div class="t4">
+    <input type="submit" value="주문하기" style="margin: auto;">
+    <input type="reset" value="다시작성">
+    </div>
+</body>
+</html>

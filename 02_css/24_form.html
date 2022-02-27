@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h1>상품 주문서</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>주문자 정보</legend>
+            <div>
+                <label for="uName" class="title">이름</label>
+                <input type="text" placeholder="여백없이입력(필수)" required>
+            </div>
+            <div>
+                <label for="uTel" class="title">전화번호</label>
+                <select id="uTel">
+                    <option value="">지역번호</option>
+                    <option value="02">02</option>
+                    <option value="031">031</option>
+                    <option value="032">032</option>
+                </select>
+            </div>
+            </fieldset>
+            <fieldset>
+                <legend>배송지 정보</legend>
+                <div>
+                    <label for="uAddr" class="title">주소</label>
+                    <input type="text" id="uAddr" placeholder="배송받을주소(필수)" required>
+                </div>
+                <label for="uComment" class="title">배송메모</label>
+                <textarea rows="5" cols="50" id="uComment"></textarea>
+            </fieldset>
+            <input type="submit" value="주문하기">
+            <input type="reset" value="다시작성">
+    </form>
+</div>
+</body>
+</html>

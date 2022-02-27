@@ -1,0 +1,249 @@
+<!--
+    <form> 태그
+
+        1. 사용자로부터 정보를 입력받을 때 사용하는 태그
+        2. 주요 속성
+            1) action : 정보를 받아서 어디서 처리할 것인지 처리할 장소를 지정 (위치, 경로)
+            2) method : 정보를 전달하는 방식
+                (1) get: default, 정보를 header에 포함시켜서 보냄
+                        정보가 노출됨 (보안 처리가 안 된다)
+                        빠름 (ex. 검색)
+                (2) post: 정보를 body에 포함시켜서 보냄
+                            정보가 보안처리됨
+                            느림 (ex. 회원가입, 로그인)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="5">
+        <!-- 1. 텍스트 상자 -->
+        <h3>텍스트 상자</h3>
+        일반 텍스트 상자 : <input type="text" placeholder="일반 텍스트 상자"/> <!-- 칸에 입력하기 전에 나타나는 것들.. --> <br>
+        비밀번호 텍스트 상자 : <input type="password" placeholder="비밀번호를 입력하세요."/> <br>
+        숫자용 텍스트 상자 : <input type="number"/><br>
+        이메일 텍스트 상자: <input type="email"/><br>
+        URL 텍스트 상자 : <input type="url"/><br>
+        전화번호 : <input type="tel"/><br>
+        날짜 텍스트 상자 : <input type="date"/><br>
+        시간 텍스트 상자 : <input type="time"/><br>
+    
+        <hr>
+
+        <!-- 1. label 이 없는 경우 -->
+        아이디 <input type="text"/><br>
+        <!-- 2-1 label이 있는 경우-->
+        <label> 아이디 <input type="text"/></label><br>
+        <!-- 2-2 label이 있는 경우-->
+        <label for="uId"> 아이디 </label>
+        <input type="text" id="uId"/><br>
+        </label>
+        <hr>
+
+        <!-- 버튼 -->
+        <h3> 버튼 </h3>
+        일반 버튼: <input type="button" value="전송1"/><br>
+        일반 버튼: <button>전송2</button><br>
+        전송 버튼 : <input type="submit" value="전송"/><br>
+                    <!-- submit : 폼에 입력된 모든 데이터를 action 속성으로 보낸다-->
+        취소 버튼 : <input type="reset" value="취소"/><br>
+        이미지 버튼 : <input type="image" src="images/다운2로드.jpg" width="400"/><br>
+        숨김 버튼 : <input type="hidden" name="age" value="20"/><br>
+
+    </form>
+
+    <!-- 라디오 버튼-->
+    <!-- 여러 선택 중에서 하나만 선택하는 경우에 사용 (남, 여)-->
+    <!-- 라디오 버튼은 name 속성을 같은 값으로 설정-->
+
+    <h3>라디오 버튼</h3>
+    <input type="radio" name="gender" value="남"/>남
+    <input type="radio" name="gender" value="여"/>여<br>
+    <!-- checked 옵션으로 초기값 설정 가능-->
+    
+    <!-- 체크박스 -->>
+    <!-- 여러 ㅂ선택 중에서 자유롭게 선택하는 경우에 사용 (취미, 선호)-->
+    <!-- 체크 박스는 name 속성을 같은 값으로 설정한다-->
+    <h3>체크 박스</h3>
+    
+    <input type="checkbox" name="hobbies" value="영화"/>영화
+
+    <input type="checkbox" name="hobbies" value="음악"/>음악
+    <input type="checkbox" name="hobbies" value="게임"/>게임
+    <hr>
+
+    <!-- 필드 셋-->
+    <h3>필드 셋</h3>
+    <fieldset>
+        <legend>지역</legend> <!-- 필드 셋의 제목-->
+    <input type="checkbox" name="region" value="강남"/>강남
+    <input type="checkbox" name="region" value="강북"/>강북
+    <input type="checkbox" name="region" value="강동"/>감동
+    <input type="checkbox" name="region" value="강서"/>감서
+    </fieldset>
+
+    <hr>
+
+    <!-- textarea 
+        많은 양의 텍스트를 처리할 때 사용하는 태그
+        속성: 행- rows, 열- cols-->
+        
+        <h3>textarea</h3>
+        <textarea rows="10", cols="100" placeholder="자기 소개 100자 입력" style="resize: none;"></textarea>
+
+        <hr>
+        <!-- 목록 상자 (Select Box)-->
+        <!--  <select 태그로 목록을 밤들고, <opion> 태그로 값을 추가한다 
+        <h3>목록상자 </h3> -->
+
+        <h3>목록상자</h3>
+        <select name="addr2" size="4" multiple>
+            <option value="1">강남</option>
+            <option value="2">강북</option>
+            <option value="3">강동</option>
+            <option value="4">강서</option>
+        </select>
+
+        <hr>
+        <!-- 콤보 상자 (목록상자+직접입력)-->
+        <h3>콤보상자</h3>
+        <input type="text" list="animals"/>
+        <datalist id="animals">
+            <option value="강아지">강아지</option>
+            <option value="고양이">고양이</option>
+            <option value="새">새</option>
+            <option value="호랑이">호랑이</option>
+
+        </datalist>
+
+        <hr>
+
+        <!-- 기타 
+        진행 바 : 전체 100 중 50 상태        -->
+        50% 진행 : <progress value="50" max="100"></progress><br>
+
+        <!-- 색상표-->
+        색상표 : <input type="color"/><br>
+
+        <!-- 범위 바 : 0~100 사이 10단위로 표시-->
+        범위 : <input type="range" min="0" max="100" step="10"/><br>
+
+        <!-- 파일 첨부 -->
+        첨부 파일 : <input type="file"/>
+
+    
+        <br>
+        <br>
+
+        <h3>연습문제-1</h3><br>
+        아이디 : <input type="text" placeholder="아이디"><br>
+        비밀번호 : <input type="password" placeholder="비밀번호"><br>
+        <input type="button" value="로그인">
+
+ 
+        <br>
+        <br>
+        <h3>연습문제-2</h3>
+        <fieldset>
+            아이디 : <input type="email" placeholder="example@naver.com">
+            비밀번호 : <input type="password" placeholder="비밀번호">
+            <input type="button" value="로그인">
+        </fieldset>
+        <br>
+
+        <h3>연습문제-3</h3>
+        <h1>회원가입</h1>
+        <h3>로그인정보</h3>
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text"/><br></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password"/> <br><br></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td><input type="password"/> <br><br></td>
+            </tr>
+        </table>
+        
+        <h3>개인정보</h3>
+        <table>
+            <tr>
+                <td>이름</td>
+                <td><input type="text"/><br></td>
+            </tr>
+            <tr>
+                <td>메일주소</td>
+                <td><input type="email"/><br></td>
+            </tr>
+            <tr>
+                <td>연락처</td>
+                <td><input type="number"/><br></td>
+            </tr>
+            <tr>
+                <td>블로그/홈페이지</td>
+                <td><input type="url"/><br></td>
+            </tr>
+        </table>
+        <input type="button" value="가입하기"><br>
+
+        <h3>연습문제-4</h3>
+        <h1> 회원가입</h1>
+        <h3>로그인 정보</h3>
+        <ul type="checked">
+            <li>아이디 <input type="text"></li>
+            <li>비밀번호 <input type="password"></li>
+            <li>비밀번호 확인 <input type="password"></li>
+        </ul>
+
+        <h3>개인 정보</h3>
+        <ul type="checked">
+            <li>이름 <input type="text"></li>
+            <li>메일주소 <input type="email"></li>
+            <li>연락처 <input type="number"></li>
+            <li>블로그/홈페이지 <input type="url"></li>
+        </ul>
+        <input type="button" value="가입하기"><br><br>
+
+        이름 : <input type="text" placeholder="이름"><br>
+        나이 : <input type="number" placeholder="나이"><br>
+        비밀번호 : <input type="password" placeholder="비밀번호"><br>
+        이메일 : <input type="email" placeholder="이메일"><br><br>
+
+        <fieldset>
+            <legend>성별</legend>
+            <input type="checkbox" name="gender" value="남자">남자
+            <input type="checkbox" name="gender" value="여자">여자
+        </fieldset>
+
+        <fieldset>
+            <legend>취미</legend>
+            <input type="checkbox" name="hobbies" value="운동">운동
+            <input type="checkbox" name="hobbies" value="영화">영화
+            <input type="checkbox" name="hobbies" value="게임">게임
+            <input type="checkbox" name="hobbies" value="여행">여행
+        </fieldset>
+        
+        거주지 : <select name="addr1" size="4" multiple>
+            <option value="1">서울</option>
+            <option value="2">부산</option>
+            <option value="3">진해</option>
+            <option value="4">울산</option>
+        </select><br>
+
+        이력서 : <input type="file" value="파일 선택"><br>
+        자기소개서 : <textarea rows="10", cols="100" placeholder="150자 이내 작성" style="resize: none;"></textarea><br>
+
+        제출일 : <input type="date"><br>
+
+</body>
+</html>

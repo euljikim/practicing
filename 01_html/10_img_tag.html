@@ -1,0 +1,48 @@
+<!-- 
+
+    img 태그
+
+    1. 이미지 삽입
+    2. 속성
+        1) src : 이미지 위치 (경로)
+        2) alt : 이미지 대신 표시할 텍스트
+    3. 경로 표시
+        1) 절대 경로 : html이 현재 위치한 경로 (C:/dev_pre/01_html/images/bart.jpg) 
+        2) 상대 경로 : ../images/다운2로드.jpg
+            (동일한 레벨이면 그냥 언급만 하면 됨. 하위 폴더나 자식파일이면 다르게.)
+                (1) . : 현재 폴더
+                (2) .. : 상위 폴더
+
+            (절대경로는 위치를 바꾸지 않는 이상 안 바뀜.
+            상대경로는 불러올 환경에 대한 파악이 중요. 수시로 위치가 바뀔 거 같으면 상대경로로 하는 게 좋음.)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 이미지 표시 </h1>
+
+    <img alt="국힙원탑 IU" src="images/다운2로드.jpg">    
+    <!-- alt 속성을 신경써야 하는 이유 : 이미지를 제대로 가져오지 못할 경우 alt로 출력되기 때문에 -->
+
+   
+    <h1> 서버에 저장된 이미지 </h1>
+    <img src="https://w.namu.la/s/3ae82b7cc6142684da6b7ac333ace87f292b00ca18dbc14c9b849ca599cb2606f43c8a950ab1d58e037d4860ae7222ebbd082731f348dd88d9aa0dfae084eab57acc07c6ad3127a377bdff6bea2e8ee9b871fb9a256a8fd977dd74a7cce2e633">
+
+    <h1> 크기 조정 </h1>
+    <img alt="국힙원탑 IU" src="images/다운로드.jpg" style="width: 600px;">    
+    
+
+    <!-- 
+        너비(width)나 높이(height) 중 하나만 조정해도 함께 조정된다.
+    -->
+
+</body>
+</html>
